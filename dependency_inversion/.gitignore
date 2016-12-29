@@ -1,0 +1,14 @@
+# gradle
+gradle/
+.gradle/
+build/
+gradlew*
+
+# IntelliJ
+*.ipr
+*.iws
+*.iml
+.idea/
+
+# OS
+.DS_Store
