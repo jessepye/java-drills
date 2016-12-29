@@ -1,4 +1,4 @@
-package com.allstate;
+package com.galvanize;
 
 import org.junit.Test;
 

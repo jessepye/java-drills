@@ -1,4 +1,4 @@
-package com.allstate;
+package com.galvanize;
 
 import java.math.BigDecimal;
 
