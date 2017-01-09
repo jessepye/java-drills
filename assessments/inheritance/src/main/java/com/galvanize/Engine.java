@@ -2,12 +2,13 @@ package com.galvanize;
 
 import java.math.BigDecimal;
 
-class Radiator extends Component {
-    private String coolantPressure;
+abstract class Engine extends Component {
+    private String displacement, compressionRatio;
 
-    Radiator(String manufacturer, String partNumber, String description, String coolantPressure, BigDecimal price) {
+    Engine(String manufacturer, String partNumber, String description, String displacement, String compressionRatio, BigDecimal price) {
         super(manufacturer, partNumber, description, price);
-        this.coolantPressure = coolantPressure;
+        this.displacement = displacement;
+        this.compressionRatio = compressionRatio;
     }
 
     @Override
@@ -24,17 +25,21 @@ class Radiator extends Component {
                 partNumber +
                 ", description: " +
                 description +
-                ", coolantPressure: " +
-                coolantPressure;
+                ", displacement: " +
+                displacement +
+                ", compressionRatio: " +
+                compressionRatio
+                ;
     }
 
     @Override
     boolean coolingSystemComponent() {
-        return true;
+        return false;
     }
 
     @Override
     boolean engineComponent() {
-        return false;
+        return true;
     }
+
 }
