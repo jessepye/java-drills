@@ -20,8 +20,16 @@ public class WebFramework {
         }
         Set<String> descriptions = new TreeSet<>();
 
-        // TODO: Collect the remaining information for the description
-
+        // Collect the remaining information for the description
+        for (Method method : ObjectController.class.getMethods()) {
+            for (Annotation annotation : method.getAnnotations()) {
+                if (annotation instanceof RequestMapping) {
+                    RequestMapping mapping = (RequestMapping) annotation;
+                    RequestMethod verb = (RequestMethod) mapping.method()[0];
+                    descriptions.add(method.getName() + "() handles " + verb + " " + basePath + mapping.path()[0]);
+                }
+            }
+        }
         return descriptions;
     }
 }
