@@ -38,4 +38,5 @@ public class ObjectController {
     public Iterable<Object> categories(@PathVariable Long objectId) {
         return objects;
     }
+
 }
