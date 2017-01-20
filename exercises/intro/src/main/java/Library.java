@@ -2,19 +2,22 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Library {
+    String[] wordList;
 
-    String[] args;
-
-    public Library(String[] args) {
-        this.args = args;
+    Library(String[] wordList) {
+        this.wordList = wordList;
     }
 
     public List<Integer> getLetterCounts() {
-        List<Integer> counts = new ArrayList<>();
-        for (int i = 0; i < args.length; i++) {
-            counts.add(args[i].length());
-        }
-        return counts;
-    }
+        List<Integer> result = new ArrayList<>();
+        for (String s : wordList) {
+            if (s.equals("secret") || s.equals("hidden") || s.equals("shhh")) {
+                result.add(-1);
+            } else {
+                result.add(s.length());
+            }
 
+        }
+        return result;
+    }
 }

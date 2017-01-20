@@ -14,5 +14,4 @@ public class App {
             logger.info(args[i] + "=" + counts.get(i));
         }
     }
-
 }
