@@ -1,7 +1,7 @@
 package polymorphism02;
 
-public class JSONImporter {
-  public void importJSON(){
+public class JSONImporter implements Importer{
+  public void importData(){
     System.out.println("Importing JSON");
   }
 }
