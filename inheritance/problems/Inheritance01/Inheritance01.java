@@ -7,5 +7,7 @@ public class Inheritance01 {
     Person person = new Person();
 
     person.printName("Ed", "Eades");
+    person.printName("Ed", "Eades", true);
+    person.printName("Ed", "Edward", "Eades");
   }
 }
