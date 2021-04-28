@@ -1,12 +1,9 @@
 package inheritance04_lib;
 
-public class Subtractor {
-  int x;
-  int y;
+public class Subtractor extends Calculator{
 
   public Subtractor(int x, int y) {
-    this.x = x;
-    this.y = y;
+    super(x, y);
   }
 
   public int subtract() {

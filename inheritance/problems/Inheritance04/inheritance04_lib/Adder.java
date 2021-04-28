@@ -1,12 +1,9 @@
 package inheritance04_lib;
 
-public class Adder {
-  int x;
-  int y;
+public class Adder extends Calculator {
 
   public Adder(int x, int y) {
-    this.x = x;
-    this.y = y;
+    super(x, y);
   }
 
   public int add() {

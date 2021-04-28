@@ -1,12 +1,9 @@
 package inheritance04_lib;
 
-public class Multiplier {
-  int x;
-  int y;
+public class Multiplier extends Calculator{
 
   public Multiplier(int x, int y) {
-    this.x = x;
-    this.y = y;
+    super(x, y);
   }
 
   public int multiply() {
