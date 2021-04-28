@@ -1,17 +1,24 @@
 package encapsulation03_lib;
 
 public class Account {
-  private int balance = 0;
+  private int[] balance = new int[10];
+  private int currentInsertionIndex = 0;
 
   public int balance() {
-    return balance;
+    int total = 0;
+    for (int i = 0; i < currentInsertionIndex; i++) {
+      total += balance[i];
+    }
+    return total;
   }
 
   public void deposit(int amount) {
-    balance += amount;
+    balance[currentInsertionIndex] = amount;
+    currentInsertionIndex++;
   }
 
   public void withdraw(int amount) {
-    balance -= amount;
+    balance[currentInsertionIndex] = -amount;
+    currentInsertionIndex++;
   }
 }
