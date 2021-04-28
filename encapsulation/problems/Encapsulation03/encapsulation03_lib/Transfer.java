@@ -10,7 +10,7 @@ public class Transfer {
   }
 
   public void transfer(int amount) {
-    sourceAccount.balance -= amount;
-    destinationAccount.balance += amount;
+    sourceAccount.withdraw(amount);
+    destinationAccount.deposit(amount);
   }
 }
