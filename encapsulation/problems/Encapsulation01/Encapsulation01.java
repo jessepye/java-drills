@@ -10,5 +10,7 @@ public class Encapsulation01 {
 
     prop.allInFavor = 24;
     System.out.println(prop.allInFavor);
+    prop.allAgainst = 12;
+    System.out.println(prop.allAgainst);
   }
 }
